@@ -27,3 +27,9 @@ variable "private_subnet_count" {
   type        = number
   description = "How many private subnets to create"
 }
+
+variable "database_username" {
+  default     = "root"
+  type        = string
+  description = "A given username for the DB user"
+}
