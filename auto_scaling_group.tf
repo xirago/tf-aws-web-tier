@@ -4,7 +4,9 @@ resource "aws_launch_template" "default" {
   image_id      = data.aws_ami.awslinux.image_id
   instance_type = "t3.nano"
 
-  tags = local.tags
+  iam_instance_profile {
+    arn = aws_iam_instance_profile.default.arn
+  }
 }
 
 # Deploy minimal ASG across private subnets
