@@ -1,5 +1,5 @@
 locals {
-  # Use provided name as prefix
+  # Use provided var.name as prefix on some resources
   shortname = replace(var.name, "-", "")
 
   tags = {

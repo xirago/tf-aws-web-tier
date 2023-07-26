@@ -12,6 +12,8 @@ resource "aws_db_subnet_group" "database" {
 
 }
 
+# Create a basic MySQL DB isntance
+# Backups are not requried
 resource "aws_db_instance" "database" {
   allocated_storage = 50
   db_name           = "${local.shortname}db"
