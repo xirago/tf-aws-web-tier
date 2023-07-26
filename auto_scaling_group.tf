@@ -1,8 +1,10 @@
 #  aws ec2 describe-images --owners amazon --filters "Name=name,Values=amzn2-ami-hvm-2.0.20210721.2-x86_64-ebs" --query 'sort_by(Images, &CreationDate)[].ImageId' | jq -r
 # Define a very basic launch template
 resource "aws_launch_template" "default" {
-  image_id = "ami-0f5ea7c2783b14c09"
+  image_id      = data.aws_ami.awslinux.image_id
   instance_type = "t3.nano"
+
+  tags = local.tags
 }
 
 # Deploy minimal ASG across private subnets
