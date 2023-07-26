@@ -21,4 +21,7 @@ resource "aws_autoscaling_group" "cint-demo" {
     id      = aws_launch_template.default.id
     version = aws_launch_template.default.latest_version
   }
+
+  # attach asg to alb target group
+  target_group_arns = [aws_lb_target_group.asg.arn]
 }
