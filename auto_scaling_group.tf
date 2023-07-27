@@ -12,7 +12,7 @@ resource "aws_launch_template" "default" {
 }
 
 # Deploy minimal ASG across private subnets
-resource "aws_autoscaling_group" "cint-demo" {
+resource "aws_autoscaling_group" "cint_demo" {
   vpc_zone_identifier = tolist(aws_subnet.private[*].id)
 
   desired_capacity = 2
