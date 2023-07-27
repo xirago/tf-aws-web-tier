@@ -33,3 +33,15 @@ variable "database_username" {
   type        = string
   description = "A given username for the DB user"
 }
+
+variable "force_destroy" {
+  default     = true
+  type        = bool
+  description = "Destroy all resources without ANY chance for recovery"
+}
+
+variable "ssh_key_name" {
+  default     = null
+  type        = string
+  description = "(optional) Add pre-existing SSH key to ASG instances"
+}

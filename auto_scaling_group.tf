@@ -2,8 +2,8 @@
 resource "aws_launch_template" "default" {
   image_id               = data.aws_ami.awslinux.image_id
   instance_type          = "t3.nano"
-  image_id      = data.aws_ami.awslinux.image_id
-  instance_type = "t3.nano"
+  key_name               = var.ssh_key_name
+  name_prefix            = var.name
   vpc_security_group_ids = [aws_security_group.private.id]
 
   iam_instance_profile {
