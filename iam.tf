@@ -6,8 +6,8 @@ resource "aws_iam_instance_profile" "default" {
 
 resource "aws_iam_role" "default" {
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
-  name = "${var.name}-access-role"
-  path = "/"
+  name               = "${var.name}-access-role"
+  path               = "/"
 }
 
 resource "aws_iam_role_policy" "access_asm" {

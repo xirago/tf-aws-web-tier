@@ -37,6 +37,7 @@ data "aws_iam_policy_document" "assume_role" {
   }
 }
 
+# Permit ASG instances to lookup uo DB credentials
 data "aws_iam_policy_document" "asm_access" {
   statement {
     actions = ["secretsmanagr:GetSecretValue", "kms:Decrypt"]
