@@ -8,7 +8,8 @@ resource "aws_security_group" "private" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = tolist(aws_subnet.public[*].cidr_block)
+    security_groups = [aws_security_group.public.id]
+
   }
 
   egress {
