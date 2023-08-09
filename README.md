@@ -66,12 +66,16 @@ terraform apply --destroy
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 4.66.1 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.5.1 |
 
+## Modules
+
+No modules.
+
 ## Resources
 
 | Name | Type |
 |------|------|
 | [aws_alb.frontend](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb) | resource |
-| [aws_autoscaling_group.cint_demo](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/autoscaling_group) | resource |
+| [aws_autoscaling_group.this|](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/autoscaling_group) | resource |
 | [aws_db_instance.database](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance) | resource |
 | [aws_db_subnet_group.database](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_subnet_group) | resource |
 | [aws_eip.nat_eip](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) | resource |
@@ -110,7 +114,7 @@ terraform apply --destroy
 |------|-------------|------|---------|:--------:|
 | <a name="input_database_username"></a> [database\_username](#input\_database\_username) | A given username for the DB user | `string` | `"root"` | no |
 | <a name="input_force_destroy"></a> [force\_destroy](#input\_force\_destroy) | Destroy all resources without ANY chance for recovery | `bool` | `true` | no |
-| <a name="input_name"></a> [name](#input\_name) | Root name for resources in this project | `string` | `"cint-code-test"` | no |
+| <a name="input_name"></a> [name](#input\_name) | Root name for resources in this project | `string` | `"three-tier-demo"` | no |
 | <a name="input_newbits"></a> [newbits](#input\_newbits) | How many bits to extend the VPC cidr block by for each subnet | `number` | `8` | no |
 | <a name="input_private_subnet_count"></a> [private\_subnet\_count](#input\_private\_subnet\_count) | How many private subnets to create | `number` | `3` | no |
 | <a name="input_public_subnet_count"></a> [public\_subnet\_count](#input\_public\_subnet\_count) | How many subnets to create | `number` | `3` | no |
