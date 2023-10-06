@@ -61,7 +61,7 @@ resource "aws_subnet" "private" {
 }
 
 resource "aws_eip" "nat_eip" {
-  vpc = true
+  # vpc = true
   tags = merge(
     { Name = var.name },
     local.tags
