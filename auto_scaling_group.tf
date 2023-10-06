@@ -12,12 +12,12 @@ resource "aws_launch_template" "default" {
 }
 
 # Deploy minimal ASG across private subnets
-resource "aws_autoscaling_group" "this|" {
+resource "aws_autoscaling_group" "this" {
   vpc_zone_identifier = tolist(aws_subnet.private[*].id)
 
-  desired_capacity = 2
-  max_size         = 2
-  min_size         = 2
+  desired_capacity = 1
+  max_size         = 1
+  min_size         = 1
 
   launch_template {
     id      = aws_launch_template.default.id
