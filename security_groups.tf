@@ -4,10 +4,10 @@ resource "aws_security_group" "private" {
   vpc_id      = aws_vpc.main.id
 
   ingress {
-    description = "Allow HTTP from public ALB"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
+    description     = "Allow HTTP from public ALB"
+    from_port       = 80
+    to_port         = 80
+    protocol        = "tcp"
     security_groups = [aws_security_group.public.id]
 
   }
