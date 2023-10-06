@@ -2,9 +2,9 @@
 
 This Terraform repository defines a basic set AWS infrastructure resources for a three tier web application environemt.
 
-## Infrastructure Diagram
-
-![Infrastruture Diagram](images/diagram.png)
+- Application Load Balancer (port 80)
+- EC2 instance(s) in an Auto-Scaling Group
+- RDS MySQL DB
 
 ## Deployment notes
 
@@ -75,7 +75,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [aws_alb.frontend](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/alb) | resource |
-| [aws_autoscaling_group.this|](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/autoscaling_group) | resource |
+| [aws_autoscaling_group.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/autoscaling_group) | resource |
 | [aws_db_instance.database](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance) | resource |
 | [aws_db_subnet_group.database](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_subnet_group) | resource |
 | [aws_eip.nat_eip](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) | resource |
